@@ -31,6 +31,9 @@ jobs:
         run: node ./scripts/config-compile.js
         env:
           APP_SUPER_SECRET: ${{ secrets.APP_SUPER_SECRET }}
+      - name: Deploy App to App Engine
+        run: gcloud app deploy
+      - run: rm -f app.yaml
     # Runs a single command using the runners shell
 #     - name: Run a one-line script
 #       run: echo Hello, world!
