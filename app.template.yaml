@@ -1,0 +1,3 @@
+runtime: go112
+env_variables:
+  SUPER_SECRET: ${{SUPER_SECRET}}
