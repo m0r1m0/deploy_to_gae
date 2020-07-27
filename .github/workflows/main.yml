@@ -38,7 +38,7 @@ jobs:
           service_account_key: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           export_default_credentials: true
       - name: Deploy App to App Engine
-        run: gcloud app deploy
+        run: gcloud app deploy --quiet
       - run: rm -f app.yaml
     # Runs a single command using the runners shell
       - name: Run a one-line script
